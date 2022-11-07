@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
     products
       .map(
         (product) =>
-          `<a href="http://localhost:3000/p/${product.id}">${product.name}</a>`
+          `<a href="${process.env.REDIRECT_URL}/p/${product.id}">${product.name}</a>`
       )
       .join("")
   );
