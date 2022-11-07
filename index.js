@@ -34,4 +34,7 @@ app.get("/confirmation", async (req, res) => {
   res.send(data.html_snippet);
 });
 
-app.listen(3000);
+app.listen(
+  process.env.PORT,
+  console.log(`Port is listening on ${process.env.PORT}`)
+);
